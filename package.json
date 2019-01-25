@@ -21,7 +21,8 @@
   },
   "mode": "development",
   "scripts": {
-    "build": "webpack-dev-server --watch"
+    "compile": "webpack --watch",
+    "server": "webpack-dev-server"
   },
   "keywords": [],
   "author": "cryptoneum",
