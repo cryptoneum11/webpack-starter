@@ -1,9 +1,10 @@
+const path = require('path');
 const PugPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname + '/dist'),
     filename: './js/index.js'
   },
   mode: 'development',
@@ -12,6 +13,15 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        use: ['file-loader?name=./images/[name].[ext]']
+      },
       {
         test: /\.pug$/,
         use: ['html-loader?attrs=false', 'pug-html-loader']
