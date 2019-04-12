@@ -23,8 +23,8 @@
   },
   "mode": "development",
   "scripts": {
-    "compile": "webpack --watch",
-    "server": "webpack-dev-server"
+    "compile": "webpack --mode production",
+    "server": "webpack-dev-server --mode development"
   },
   "keywords": [],
   "author": "",
