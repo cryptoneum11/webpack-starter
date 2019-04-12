@@ -24,7 +24,7 @@
   "mode": "development",
   "scripts": {
     "compile": "webpack --mode production",
-    "server": "webpack-dev-server --mode development"
+    "dev:server": "webpack-dev-server --mode development"
   },
   "keywords": [],
   "author": "",
