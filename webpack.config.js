@@ -1,8 +1,8 @@
 const path = require('path');
-const PugPlugin = require('html-webpack-plugin');
+const HTMLPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: [ 'babel-polyfill', './src/index.js' ],
+  entry: [ '@babel/polyfill', './src/index.js' ],
   output: {
     path: path.resolve(__dirname + '/dist'),
     filename: './index.js'
@@ -39,9 +39,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new PugPlugin({
+    new HTMLPlugin({
       filename: './index.html',
-      template: './src/index.pug',
+      template: './src/index.html',
       inject: false
     })
   ]
