@@ -28,11 +28,7 @@ module.exports = {
         use: ['file-loader?name=./images/[name].[ext]']
       },
       {
-        test: /\.pug$/,
-        use: ['html-loader?attrs=false', 'pug-html-loader']
-      },
-      {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       }
